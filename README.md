@@ -1,56 +1,87 @@
-# solana## almalinux:
+# Solana
+## _almalinux_
 
+```sh
 docker run -it ... /bin/sh
+```
 
-#update
+#### Update
+```sh
 bash
 dnf update
 dnf group install "Development Tools" -y
+```
 
-#install rust
+#### Install rust
+
+```sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+```
 
-!!!!!!!!!!!!!!
-During the Rust installation, there is usually a prompt asking if you want to add Rust to your PATH. If you missed it, you might need to add it manually.
-!!!!!!!!!!!!!1
+> Note: `During the Rust installation, there is usually a prompt asking if you want to add Rust to your PATH. If you missed it, you might need to add it manually.`
 
-#update PATH
+#### Update PATH
+
+```sh
 . "$HOME/.cargo/env"
 exit
 exit
-docker start nostalgic_ardinghelli
-docker exec -it nostalgic_ardinghelli /bin/bash
+```
+<!-- docker start nostalgic_ardinghelli
+docker exec -it nostalgic_ardinghelli /bin/bash -->
 
-#check
+#### check
+
+```sh
 rustc --version
 cargo --version
+```
 
-#install solana CLI
+#### install solana CLI
+
+```sh
 sh -c "$(curl -sSfL https://release.anza.xyz/stable/install)"
+```
 
-#Close and reopen your terminal to apply the PATH changes or run the following in your existing shell:
-export PATH="/root/.local/share/solana/install/active_release/bin:$PATH"
+<!-- #Close and reopen your terminal to apply the PATH changes or run the following in your existing shell:
+export PATH="/root/.local/share/solana/install/active_release/bin:$PATH" -->
 
-#check
+#### check
+
+```sh
 solana --version
+```
 
-#Install Anchor CLI
-#Install AVM - allows you to install and manage different Anchor versions
-#f you encounter the error type annotations needed for Box<\_> when installing the Anchor CLI, try changing your Rust version to 1.79.0 and attempt the installation again.
+#### Install Anchor CLI
+#### Install AVM - allows you to install and manage different Anchor versions
+
+> Note: `If you encounter the error type annotations needed for Box<\_> when installing the Anchor CLI, try changing your Rust version to 1.79.0 and attempt the installation again.`
+
+```sh
 rustup default 1.79.0
+```
 
-#Install AVM
+#### Install AVM
+
+```sh
 cargo install --git https://github.com/coral-xyz/anchor avm --force
+```
 
-#warning: be sure to add `/root/.avm/bin` to your PATH to be able to run the installed binaries???????????
+<!-- #warning: be sure to add `/root/.avm/bin` to your PATH to be able to run the installed binaries??????????? -->
 
-#Install the latest version of Anchor CLI using AVM
+#### Install the latest version of Anchor CLI using AVM
+
+```sh
 avm install latest
 avm use latest
+```
 
-#check
+#### check
+
+```sh
 avm --version
 anchor --version
+```
 
 #NVM + Node installation
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
