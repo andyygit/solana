@@ -179,7 +179,7 @@ qemu-img convert -f raw -O qcow2 diffdisk diffdisk_tmp
 ```
 > delete diffdisk, rename diffdisk_tmp to diffdisk
 
-> does not work under linux, rancher cannot use the new disk image
+> does not work under linux, rancher cannot use the new disk image  
 > foldere implicate ce au trebuit sterse:  
 > /home/user/.local/share/rancher-desktop  
 > /home/user/.config/Rancher Desktop  
