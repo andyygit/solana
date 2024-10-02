@@ -185,7 +185,7 @@ qemu-img convert -f raw -O qcow2 diffdisk diffdisk_tmp
 > /home/user/.config/Rancher Desktop  
 > /home/user/.docker  
 > /home/user/.cache/rancher-desktop  
-> /home/user/.rd~~
+> /home/user/.rd~~  
 > need factory reset: Troubleshooting - Factory Reset
 
 ## Video adnotations
