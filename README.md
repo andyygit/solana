@@ -3,7 +3,7 @@
 ## _Dependencies_
 
 ```sh
-docker run -it ... /bin/bash
+docker run -it --name mycontainer almalinux /bin/bash
 ```
 
 #### Update
