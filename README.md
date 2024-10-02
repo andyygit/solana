@@ -90,10 +90,10 @@ avm use latest
 export PATH="/root/.avm/bin:$PATH"
 ```
 
-> will not work, so edit:
-> vi /root/.bashrc
-> paste new line
-> `export PATH="/root/.avm/bin:$PATH"`
+> will not work, so edit:  
+> vi /root/.bashrc  
+> paste new line  
+> `export PATH="/root/.avm/bin:$PATH"`  
 > and relog for check
 
 #### check
@@ -109,8 +109,8 @@ anchor --version
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 ```
 
-> Close and reopen your terminal to start using nvm or run the following to use it now:
-> export NVM_DIR="$HOME/.nvm"
+> Close and reopen your terminal to start using nvm or run the following to use it now:  
+> export NVM_DIR="$HOME/.nvm"  
 > ---------------> relog & check, works
 
 #### check
@@ -143,9 +143,9 @@ yarn --version
 solana-keygen new
 ```
 
-private key stored in /root/.config/solana/id.json
-pubkey on screen (wallet`s address)
-recovery phrase on screen
+private key stored in /root/.config/solana/id.json  
+pubkey on screen (wallet`s address)  
+recovery phrase on screen  
 check balance:
 
 ```sh
