@@ -163,11 +163,20 @@ docker load -i my_export_base.tar
 
 stop Rancher Desktop, then
 
+_Windows_
+
 ```sh
 diskpart
 select vdisk file="C:\Users\zzzzzuser\AppData\Local\rancher-desktop\distro-data\ext4.vhdx"
 compact vdisk
 exit
+```
+_Linux_
+> location: `/home/user/.local/share/rancher-desktop/lima/0`
+
+```sh
+qemu-img convert -f raw -O qcow2 diffdisk diffdisk_tmp
+> delete diffdisk, rename diffdisk_tmp to diffdisk
 ```
 
 ## Video adnotations
