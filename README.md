@@ -143,10 +143,10 @@ yarn --version
 solana-keygen new
 ```
 
-private key stored in /root/.config/solana/id.json\n
-pubkey on screen (wallet`s address)\n
-recovery phrase on screen\n
-check balance:\n
+private key stored in /root/.config/solana/id.json
+pubkey on screen (wallet`s address)
+recovery phrase on screen
+check balance:
 
 ```sh
 solana balance
