@@ -176,8 +176,8 @@ _Linux_
 
 ```sh
 qemu-img convert -f raw -O qcow2 diffdisk diffdisk_tmp
-> delete diffdisk, rename diffdisk_tmp to diffdisk
 ```
+> delete diffdisk, rename diffdisk_tmp to diffdisk
 
 ## Video adnotations
 
