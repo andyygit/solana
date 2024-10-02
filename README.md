@@ -176,8 +176,8 @@ spl-token create-account ######token address##########
 
 solana balance changed (fee on creating token account)
 
-6. fill account with tokens
-   minting tokens
+6. fill account with tokens  
+minting tokens
 
 ```sh
 spl-token mint ######token address########## 1000000000 ######token account##########
