@@ -133,6 +133,43 @@ npm install --global yarn
 yarn --version
 ```
 
+## Docker make image from container (running container my-running-container):
+
+> https://www.dataset.com/blog/create-docker-image/
+
+> #stop my-running-container (otherwise see commmit with pause clause)
+
+```sh
+docker commit my-running-container
+tag e0caec570ba9 my_resulting_image
+docker history my_resulting_image
+```
+
+#### export image:
+
+```sh
+docker save my_resulting_image -o my_export_base.tar
+```
+
+#### import image:
+
+```sh
+docker load -i my_export_base.tar
+```
+
+> after import: `docker run -it --name testing1 my_export_base /bin/bash`
+
+#### cleanup after containers, images removal
+
+stop Rancher Desktop, then
+
+```sh
+diskpart
+select vdisk file="C:\Users\zzzzzuser\AppData\Local\rancher-desktop\distro-data\ext4.vhdx"
+compact vdisk
+exit
+```
+
 ## Video adnotations
 
 ## _decription narration_
@@ -214,40 +251,3 @@ spl-token transfer --fund-recipient --allow-unfunded-recipient ######token addre
 > see message "able to merge" - clic "create pull request" - confirm click create pull request  
 > see the pull requests update with your request -----see erors od problems with your pull request, (ex: logo too big - not eligible for automerge - see details)  
 > correct if errors and create another pull request
-
-## Docker make image from container (running container my-running-container):
-
-> https://www.dataset.com/blog/create-docker-image/
-
-> #stop my-running-container (otherwise see commmit with pause clause)
-
-```sh
-docker commit my-running-container
-tag e0caec570ba9 my_resulting_image
-docker history my_resulting_image
-```
-
-#### export image:
-
-```sh
-docker save my_resulting_image -o my_export_base.tar
-```
-
-#### import image:
-
-```sh
-docker load -i my_export_base.tar
-```
-
-> after import: `docker run -it --name testing1 my_export_base /bin/bash`
-
-#### cleanup after containers, images removal
-
-stop Rancher Desktop, then
-
-```sh
-diskpart
-select vdisk file="C:\Users\zzzzzuser\AppData\Local\rancher-desktop\distro-data\ext4.vhdx"
-compact vdisk
-exit
-```
