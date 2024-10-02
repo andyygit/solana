@@ -47,11 +47,11 @@ sh -c "$(curl -sSfL https://release.anza.xyz/stable/install)"
 export PATH="/root/.local/share/solana/install/active_release/bin:$PATH"
 ```
 
-> will not work, so edit:
-> vi /root/.bashrc
-> paste new line
-> `export PATH="/root/.local/share/solana/install/active_release/bin:$PATH"`
-> and relog for check
+> will not work, so edit:  
+> vi /root/.bashrc  
+> paste new line  
+> `export PATH="/root/.local/share/solana/install/active_release/bin:$PATH"`  
+> and relog for check  
 > will apply for the next path definitions
 
 #### check
