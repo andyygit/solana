@@ -151,6 +151,14 @@ docker history my_resulting_image
 docker save my_resulting_image -o my_export_base.tar
 ```
 
+> nu functioneaza  
+> foldere implicate ce au trebuit sterse:
+> /home/user/.local/share/rancher-desktop
+> /home/user/.config/Rancher Desktop
+> /home/user/.docker
+> /home/user/.cache/rancher-desktop
+> /home/user/.rd
+
 #### import image:
 
 ```sh
