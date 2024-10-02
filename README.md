@@ -176,8 +176,8 @@ spl-token create-account ######token address##########
 
 solana balance changed (fee on creating token account)
 
-6. fill account with tokens  
-minting tokens
+6. fill account with tokens
+   minting tokens
 
 ```sh
 spl-token mint ######token address########## 1000000000 ######token account##########
@@ -195,23 +195,23 @@ spl-token accounts
 spl-token transfer --fund-recipient --allow-unfunded-recipient ######token address########## 1000 ######destination wallet address##########
 ```
 
-> note: `--fund-recipient ... - fund the creation of an account for the wallet i am sending to` > `walletul (accountul) nou creat (phantom) nu va avea by default un account pentru tokenul nostru - trebuie creat deci trimitem tokens si platim crearea noului cont pentru acest token`
-> check new wallet for presence of the new token
-> check transactions on solscan.io - search ######token address########## 9. name token
-> add token to solana registry - github
-> name, symbol, logo (png square, under 200Kb - github? (raw github url)
-> solana tokenlist github page
-> for mainnet token:
-> login github
-> https://github.com/solana-labs/token-list - fork
-> open repo - in browser hit "." (launch inbrowser visual studio code) and make changes:
-> assets: make new folder - name with #####token address##########
-> right click the new created folder - upload - upload the logo - 'logo.png'
-> src - tokens - solana.tokenlist.json: add at bottom object with your token details
-> in left tab source control, commit the 2 changes: message: adding ....(name, whatever) token - commit
-> go back to solana-labs prject/repo - pull requests - new pull request - compare across forks - change head repository - select your repository
-> see message "able to merge" - clic "create pull request" - confirm click create pull request
-> see the pull requests update with your request -----see erors od problems with your pull request, (ex: logo too big - not eligible for automerge - see details)
+> note: `--fund-recipient ... - fund the creation of an account for the wallet i am sending to` > `walletul (accountul) nou creat (phantom) nu va avea by default un account pentru tokenul nostru - trebuie creat deci trimitem tokens si platim crearea noului cont pentru acest token`  
+> check new wallet for presence of the new token  
+> check transactions on solscan.io - search ######token address########## 9. name token  
+> add token to solana registry - github  
+> name, symbol, logo (png square, under 200Kb - github? (raw github url)  
+> solana tokenlist github page  
+> for mainnet token:  
+> login github  
+> https://github.com/solana-labs/token-list - fork  
+> open repo - in browser hit "." (launch inbrowser visual studio code) and make changes:  
+> assets: make new folder - name with #####token address##########  
+> right click the new created folder - upload - upload the logo - 'logo.png'  
+> src - tokens - solana.tokenlist.json: add at bottom object with your token details  
+> in left tab source control, commit the 2 changes: message: adding ....(name, whatever) token - commit  
+> go back to solana-labs prject/repo - pull requests - new pull request - compare across forks - change head repository - select your repository  
+> see message "able to merge" - clic "create pull request" - confirm click create pull request  
+> see the pull requests update with your request -----see erors od problems with your pull request, (ex: logo too big - not eligible for automerge - see details)  
 > correct if errors and create another pull request
 
 #make image from container (running container my-running-container): https://www.dataset.com/blog/create-docker-image/
