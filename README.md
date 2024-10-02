@@ -181,11 +181,11 @@ qemu-img convert -f raw -O qcow2 diffdisk diffdisk_tmp
 
 > does not work under linux, rancher cannot use the new disk image  
 > foldere implicate ce au trebuit sterse:  
-> /home/user/.local/share/rancher-desktop  
-> /home/user/.config/Rancher Desktop  
-> /home/user/.docker  
-> /home/user/.cache/rancher-desktop  
-> /home/user/.rd
+> ~~/home/user/.local/share/rancher-desktop  ~~
+> ~~/home/user/.config/Rancher Desktop  ~~
+> ~~/home/user/.docker  ~~
+> ~~/home/user/.cache/rancher-desktop  ~~
+> ~~/home/user/.rd~~
 
 ## Video adnotations
 
