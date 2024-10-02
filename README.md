@@ -1,6 +1,6 @@
 ## Basic Sol setup
 
-## _Dependencies_
+## _Dependencies - Rancher Desktop_
 
 ```sh
 docker run -it --name mycontainer almalinux /bin/bash
