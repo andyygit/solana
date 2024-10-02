@@ -159,7 +159,7 @@ docker load -i my_export_base.tar
 
 > after import: `docker run -it --name testing1 my_export_base /bin/bash`
 
-#### cleanup after containers, images removal
+#### cleanup after containers, images removal --> srhink virtual disk size
 
 stop Rancher Desktop, then
 
