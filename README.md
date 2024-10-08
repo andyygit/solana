@@ -269,3 +269,11 @@ spl-token transfer --fund-recipient --allow-unfunded-recipient ######token addre
 > see message "able to merge" - clic "create pull request" - confirm click create pull request  
 > see the pull requests update with your request -----see erors od problems with your pull request, (ex: logo too big - not eligible for automerge - see details)  
 > correct if errors and create another pull request
+
+```sh
+docker run -it -p 8899:8899 -p 8900:8900 --name test my_export_base /bin/bash
+cd ~
+mkdir validator
+cd validator
+solana-test-validator
+```
