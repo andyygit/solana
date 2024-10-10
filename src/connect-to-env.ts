@@ -11,25 +11,19 @@ const connect = async () => {
     const keypair = Keypair.fromSecretKey(Uint8Array.from(my_key));
     const connection = new Connection(HTTP_ENDPOINT, 'confirmed');
     // const connection = new Connection(HTTP_ENDPOINT, { wsEndpoint: WSS_ENDPOINT });
-    const signature = await connection.requestAirdrop(keypair.publicKey, LAMPORTS_PER_SOL);
+    const signatureAirdrop = await connection.requestAirdrop(keypair.publicKey, LAMPORTS_PER_SOL * 4);
     const { blockhash, lastValidBlockHeight } = await connection.getLatestBlockhash();
     await connection.confirmTransaction({
       blockhash,
       lastValidBlockHeight,
-      signature,
+      signature: signatureAirdrop,
     });
     console.log(blockhash);
     console.log(lastValidBlockHeight);
-    console.log(signature);
+    console.log(signatureAirdrop);
   } else {
     console.log('No --env-vile was provided in command, cannot run');
   }
 };
 
 connect();
-
-// if (SECRET_KEY) {
-//   console.log(SECRET_KEY.split(',').map((i) => parseInt(i)));
-// } else {
-//   console.log('No --env-vile was provided in command, cannot run');
-// }
