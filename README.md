@@ -272,6 +272,8 @@ spl-token transfer --fund-recipient --allow-unfunded-recipient ######token addre
 
 ```sh
 docker run -it -p 8899:8899 -p 8900:8900 --name test my_export_base /bin/bash
+solana config set -ul
+solana-keygen new
 cd ~
 mkdir validator
 cd validator
