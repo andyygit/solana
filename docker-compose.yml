@@ -1,0 +1,16 @@
+#version: '3.5'
+
+services:
+  solana:
+    container_name: solana-playground
+    hostname: solana-playground-host
+    build: .
+    tty: true
+    stdin_open: true
+    entrypoint: /bin/bash
+    volumes:
+      - data_solana_playground:/root/projects
+volumes:
+  data_solana_playground:
+    name: solana-playground-data
+    driver: local

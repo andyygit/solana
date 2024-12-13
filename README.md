@@ -1,3 +1,9 @@
+> _https://solana-labs.github.io/solana-web3.js/_
+
+1. `docker-compose up -d`
+
+2. `docker attach solana-playground`
+
 ## Basic Sol setup
 
 ## _Dependencies - Rancher Desktop_
@@ -171,16 +177,19 @@ select vdisk file="C:\Users\zzzzzuser\AppData\Local\rancher-desktop\distro-data\
 compact vdisk
 exit
 ```
+
 _Linux_
+
 > location: `/home/user/.local/share/rancher-desktop/lima/0`
 
 ```sh
 qemu-img convert -f raw -O qcow2 diffdisk diffdisk_tmp
 ```
+
 > delete diffdisk, rename diffdisk_tmp to diffdisk
 
 > does not work under linux, rancher cannot use the new disk image  
-~~> foldere implicate ce au trebuit sterse:  
+> ~~> foldere implicate ce au trebuit sterse:  
 > /home/user/.local/share/rancher-desktop  
 > /home/user/.config/Rancher Desktop  
 > /home/user/.docker  
