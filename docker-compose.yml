@@ -5,6 +5,9 @@ services:
     container_name: solana-playground
     hostname: solana-playground-host
     build: .
+    environment:
+      - DEBIAN_FRONTEND=noninteractive
+      - TZ=Europe/Bucharest
     tty: true
     stdin_open: true
     entrypoint: /bin/bash

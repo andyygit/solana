@@ -4,11 +4,11 @@ WORKDIR /root
 RUN mkdir validator
 RUN mkdir projects
 
-RUN rm -rf /etc/localtime
-RUN ln -s /usr/share/zoneinfo/Europe/Bucharest /etc/localtime
-RUN echo 'Europe/Bucharest' > /etc/timezone
+# RUN rm -rf /etc/localtime
+# RUN ln -s /usr/share/zoneinfo/Europe/Bucharest /etc/localtime
+# RUN echo 'Europe/Bucharest' > /etc/timezone
 
-RUN apt-get -y update
+RUN apt-get -y update && DEBIAN_FRONTEND="noninteractive" TZ="Europe/Bucharest" apt-get install -y tzdata
 RUN apt-get install -y vim curl build-essential
 #colorscheme delek
 
